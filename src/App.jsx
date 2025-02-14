@@ -1,10 +1,19 @@
+import { Canvas } from '@react-three/fiber'
 import React from 'react'
+import { OrbitControls } from '@react-three/drei'
+// import * as THREE from 'three'
+import Cylinder from './Cylinder'
 
-const App = () => {
+
+const App = () => {  
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>Hello World</h1>
-    </div>
+    <>
+    <Canvas >
+      <OrbitControls />
+      <ambientLight intensity={10} />
+      <Cylinder />
+    </Canvas>
+    </>
   )
 }
 
